@@ -1,0 +1,25 @@
+#  posts.url=http://localhost:8081/posts?userId={id}
+#    todos.url=http://localhost:8082/todos?userId={id}
+#Kafka configuration
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: classpath:cert.p12
+    key-store-type: PKCS12
+    key-store-password: 123456
+    key-alias: users
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.springframework.kafka.support.serializer.StringOrBytesSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    template:
+      default-topic: users-v1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,255 @@
+openapi: 3.0.4
+info:
+  title: Swagger Users - OpenAPI 3.0
+  description: |-
+    This is a sample users Store Server based on the OpenAPI 3.0 specifications.
+    The goal is to create a subset of the backend architecture for the fake API provided.
+    The scope of the actual implementation will be limited to the users end point and a single kafka stream microservice simulating a data lake. 
+
+    Some useful links:
+    - [The Spring bootcamp repository](https://github.ibm.com/CIC-Montreal-Cloud/wiki/wiki/Spring-bootcamp)
+    - [The fake API provided at](https://jsonplaceholder.typicode.com/guide/)
+  contact:
+    email: ali.labiad@ibm.com
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8081/api/v1
+tags:
+  - name: user
+    description: Everything about your users
+paths:
+  /users/{userId}:
+    put:
+      tags:
+        - user
+      summary: Update an existing user.
+      description: Update an existing user by Id.
+      operationId: updateUser
+      parameters:
+        - name: userId
+          in: path
+          description: The id of user that need to be updated.
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: Update an existent user in the store
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid request
+        '404':
+          description: User not found
+        '500':
+          description: Internal server error
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /users:
+    post:
+      tags:
+        - user
+      summary: Add a new user.
+      description: Add a new user.
+      operationId: addUser
+      requestBody:
+        description: Create a new user.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      responses:
+        '201':
+          description: The user has been created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid request.
+        '500':
+          description: Internal server error.
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    get:
+      tags:
+        - user
+      summary: retrieve all users.
+      description: Return a list of users as an array.
+      operationId: getUsers
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        '500':
+          description: Internal server error.
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /users/{id}:
+    get:
+      tags:
+        - user
+      summary: Finds User by userId.
+      description: Returns a single user.
+      operationId: findUserById
+      parameters:
+        - name: id
+          in: path
+          description: Id value that need to be considered for getting a user.
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid request.
+        '401':
+          description: user not found.
+        '500':
+          description: Internal server error.
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      tags:
+        - user
+      summary: Delete user resource.
+      description: This can only be done by the logged in user.
+      operationId: deleteUser
+      parameters:
+        - name: id
+          in: path
+          description: Id value that need to be considered for getting a user.
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: User deleted
+        '400':
+          description: Invalid id supplied
+        '404':
+          description: User not found
+        '500':
+          description: Internal server error.
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        name:
+          type: string
+          example: Leanne Graham
+        username:
+          type: string
+          example: Bret
+        email:
+          type: string
+          example: Sincere@april.biz
+        adress:
+          $ref: '#/components/schemas/Address'
+        phone:
+          type: string
+          example: 1-770-736-8031 x56442
+        website:
+          type: string
+          example: hildegard.org
+        company:
+          $ref: '#/components/schemas/Company'
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+          example: Kulas Light
+        suite:
+          type: string
+          example: Apt.19
+        city:
+          type: string
+          example: Gwenborough
+        zipcode:
+          type: string
+          example: 92998-3874
+        geao:
+          $ref: '#/components/schemas/Geo'
+    Geo:
+      type: object
+      properties:
+        lat:
+          type: number
+          example: -37.3159
+        lng:
+          type: number
+          example: 81.1496
+    Company:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Romaguera-Crona
+        catchPhrase:
+          type: string
+          example: Multi-layered client-server neural-net
+        bs:
+          type: string
+          example: harness real-time e-markets
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+        - code
+        - message
