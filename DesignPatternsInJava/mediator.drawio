@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram id="QwmuYYk-VZOa7D86BXqq" name="Page-1">
+        <mxGraphModel dx="772" dy="1407" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;MoveATub2&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;MoveATub2()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;assignButton(): JButton&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;boxList(): JList&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;machineList(): JList&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;tubList(): ListView&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;labeledPanel(): JPanel&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;main()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="10" width="160" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;MoveATubMediator&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;MoveATubMediator(gui:MoveATub,data:NameBase)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;updateTubList(:String)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;valueChanged()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;actionPerformed()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="-50" width="290" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;NameBase&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;boxes() : List&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;tubMachines(): List&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="260" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="endArrow=open;endFill=0;endSize=12;html=1;entryX=-0.006;entryY=0.392;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;startArrow=open;startFill=0;startSize=12;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="260" y="80" as="sourcePoint"/>
+                        <mxPoint x="410" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="ActionListener" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="345" y="160" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="ListSelectionListener" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="160" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0.172;exitY=1.018;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.436;entryY=0.051;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3" target="6">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="320" y="160" as="sourcePoint"/>
+                        <mxPoint x="480" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="7">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="428" y="132" as="sourcePoint"/>
+                        <mxPoint x="428" y="173" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=open;endFill=1;endSize=12;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="320" y="160" as="sourcePoint"/>
+                        <mxPoint x="480" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=open;endFill=1;endSize=12;html=1;exitX=0.054;exitY=1.013;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.706;entryY=-0.049;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="320" y="160" as="sourcePoint"/>
+                        <mxPoint x="480" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
