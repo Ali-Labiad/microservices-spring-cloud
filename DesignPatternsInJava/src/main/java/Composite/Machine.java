@@ -2,6 +2,7 @@ package main.java.Composite;
 
 import java.util.Set;
 
+ 
 public class Machine extends MachineComponent {
 
     
