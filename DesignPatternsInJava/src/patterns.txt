@@ -1,3 +1,0 @@
-Interface Patterns : Adapter(Interface, Object), Bridge (Driver) , Composite, Facade
-Responsibility Patterns : Singleton , Observer, Mediator, Proxy.
-Construction Patterns: Builder, Factory Mehtod, Abstract Factory, Prototype
