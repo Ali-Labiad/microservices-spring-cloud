@@ -43,3 +43,9 @@ The intent of the **PROTOTYPE** pattern is to provide new objects by copying an 
 
 ### Memento
 The intent of the **MEMENTO** pattern is to provide storage and restoration of an object’s state.
+
+## Operation Patterns
+## Template Method
+The intent of TEMPLATE METHOD is to implement an algorithm in a method, deferring the definition of some steps of the algorithm so that other classes can redefine them.
+## Strategy
+The intent of STRATEGY is to encapsulate alternative approaches, or strategies, in separate classes that each implement a common operation.
