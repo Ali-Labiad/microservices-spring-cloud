@@ -40,3 +40,6 @@ The intent of **ABSTRACT FACTORY**, or **KIT**, is to allow the creation of fami
 
 ### Prototype
 The intent of the **PROTOTYPE** pattern is to provide new objects by copying an example rather than by bringing forth new, uninitialized instances of a class.
+
+### Memento
+The intent of the **MEMENTO** pattern is to provide storage and restoration of an object’s state.
